@@ -1,6 +1,6 @@
 <?= snippet('head') ?>
 
-<main>
+<main class="flex-grow">
 
     <?php if ($page->intro_title()->isNotEmpty()): ?>
         <div 

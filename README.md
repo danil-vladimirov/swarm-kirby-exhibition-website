@@ -4,8 +4,7 @@
     <strong>CSS powered by <a href="https://tailwindcss.com">Tailwind</a></strong><br />
 </p>
 
-Swarm is an exhibition website builder that allows Designers, Artists, and Visual Creators to showcase works online.\
-Open-source and powered by Kirby 4. You can learn more about Kirby at [getkirby.com](https://getkirby.com)
+Swarm is an exhibitions website builder for Designers, Artists, and Visual Creators to showcase works online. Open-source and powered by Kirby 4. You can learn more about Kirby at [getkirby.com](https://getkirby.com)
 
 <p>
   <a href="https://swarm-demo.danilvladimirov.co.uk/">

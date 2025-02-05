@@ -1,6 +1,6 @@
 <?= snippet('head') ?>
 
-<main>
+<main class="flex-grow">
 
     <div class="mx-4 mb-12 py-2 md:py-1 border-y border-secondary text-sm md:text-lg uppercase">
         <ul class="flex flex-wrap gap-x-5 gap-y-1 items-center">

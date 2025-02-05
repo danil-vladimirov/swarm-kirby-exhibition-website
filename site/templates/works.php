@@ -1,6 +1,6 @@
 <?= snippet('head') ?>
 
-<main>
+<main class="flex-grow">
 
     <?= snippet('categories') ?>
 

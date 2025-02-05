@@ -59,7 +59,7 @@ endif;
                 <a <?php e(page('about')->isActive(), ' class="inline bg-secondary text-primary py-1 px-2"') ?> href="/about" class="">ABOUT</a>
 
                 <?php $links = page('home')->header_links()->toStructure(); foreach ($links as $link): ?>
-                    <a href="<?= $link->link_url() ?>" class="flex flex-wrap gap-3 mt-0 md:mt-0"><?= $link->link_title() ?> ↗</a>
+                    <a href="<?= $link->link_url() ?>" class="flex flex-wrap gap-3 mt-0 md:mt-0" target="_blank"><?= $link->link_title() ?> ↗</a>
                 <?php endforeach ?>
             </div>
         </nav>

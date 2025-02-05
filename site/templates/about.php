@@ -1,6 +1,6 @@
 <?= snippet('head') ?>
 
-<main>
+<main class="flex-grow">
 
     <div class="mx-4 pt-4 border-t border-secondary grid gap-4 grid-cols-1 md:grid-cols-2">
 
