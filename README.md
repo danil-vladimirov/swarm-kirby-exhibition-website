@@ -1,12 +1,10 @@
-<p>
-    <img src="swarm-logo.svg" height="40" alt="Swarm" />
-</p>
+![swarm-logo](https://github.com/user-attachments/assets/708cf989-0c33-4129-8725-1b4e6f02442e)
 <p>
     <strong>Exhibition website built on <a href="https://getkirby.com/">Kirby</a></strong><br />
     <strong>CSS powered by <a href="https://tailwindcss.com">Tailwind</a></strong><br />
 </p>
 
-Swarm is an exhibitions website builder for Designers, Artists, and Visual Creators to showcase works online.\
+Swarm is an exhibition website builder that allows Designers, Artists, and Visual Creators to showcase works online.\
 Open-source and powered by Kirby 4. You can learn more about Kirby at [getkirby.com](https://getkirby.com)
 
 <p>
@@ -29,7 +27,7 @@ Create a website for a solo or group exhibition, upload work, and share it with 
 
 </br>
 
-<img src="swarm-preview.png" />
+![swarm-preview](https://github.com/user-attachments/assets/27c297ed-d023-4013-afb0-ed479e31ac87)
 
 # Installation
 
