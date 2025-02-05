@@ -15,9 +15,9 @@ Open-source and powered by Kirby 4. You can learn more about Kirby at [getkirby.
 
 # Features
 
-Create a website for a solo or group exhibition, upload work, and share it with the world. Let participants register, create, and publish their projects independently (perfect for showcasing student work at end-of-year exhibitions) or manage everything yourself. Add exhibition details on the About page, include external links, and publish your site!
+Create a website for a group or solo exhibition, upload work, and share it with the world. Let participants register, create, and publish their projects independently (perfect for showcasing student work at end-of-year exhibitions) or manage everything yourself. Add exhibition details on the About page, include external links, and publish your site!
 
-- Simple content management — Powered by [Kirby](sanity-homepage), accessible at `yourwebsite.com/panel`
+- Simple content management — Powered by [Kirby](https://getkirby.com), accessible at `yourwebsite.com/panel`
 - Project page — Add project name, title, description, images, videos, and external links
 - User registration — Allow (or disallow) participants to sign up and upload their work
 - Customisable design — Set background and text colors, upload a favicon and OG image
