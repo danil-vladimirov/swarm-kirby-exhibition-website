@@ -1,0 +1,50 @@
+title: Website
+
+tabs:
+  pages:
+    label: Content
+    columns:
+      - width: 1/3
+        sections:
+          pages:
+            headline: Pages
+            type: pages
+            empty: Empty
+            image: icon
+            create: false
+            templates:
+              - home
+              - about
+          registration:
+            type: fields
+            fields:
+              registration_toggle:
+                label: Turn on User registration
+                type: toggle
+                help: |
+                  Let your users to register their accounts and create their own project pages.
+
+                  Registration link: {{ site.url }}/signup
+
+                  More info: https://swarm.danilvladimirov.co.uk/guide
+      - width: 2/3
+        sections:
+          published_projects:
+            headline: Published projects
+            type: pages
+            template: ["project"]
+            parent: site.find("works")
+            empty: Empty
+            sortBy: surname asc
+            image: page.cover.toFile()
+            status: listed
+          drafts_projects:
+            headline: Drafts
+            type: pages
+            template: ["project"]
+            parent: site.find("works")
+            empty: Empty
+            sortBy: surname asc
+            image: page.cover.toFile()
+            status: draft
+  seo: seo/site

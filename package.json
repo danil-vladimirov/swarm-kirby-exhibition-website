@@ -1,0 +1,10 @@
+{
+    "name": "swarm-kirby-exhibition-website",
+    "scripts": {
+        "watch": "npx tailwindcss -i ./src/css/tailwind.css -o ./assets/css/styles.css --content './site/**/*.php' -w",
+        "build": "npx tailwindcss -i ./src/css/tailwind.css -o ./assets/css/styles.css --content './site/**/*.php' -m"
+    },
+    "dependencies": {
+        "tailwindcss": "^3.4.4"
+    }
+}

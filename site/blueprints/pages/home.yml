@@ -1,0 +1,130 @@
+title: Home page
+icon: star
+image:
+  back: "#000000"
+
+status:
+  listed: false
+  drafts: false
+  unlisted: false
+
+options:
+  delete: false
+  changeStatus: false
+  changeSlug: false
+  changeTemplate: false
+  preview: false
+
+tabs:
+  content:
+    label: Content
+    icon: text
+    columns:
+      main:
+        width: 2/3
+        sections:
+          intro:
+            type: fields
+            fields:
+              intro_headline:
+                label: Intro section
+                type: headline
+                help: |
+                  Displayed at the Home page
+              intro_title:
+                label: Headline
+                type: textarea
+                buttons: false
+                width: 1/2
+                help: Add text to this field and save changes to display intro section
+              intro_subtitle:
+                label: Sub header
+                type: textarea
+                buttons: false
+                width: 1/2
+                help: Optional / Displayed below the headline
+          intro_options:
+            type: fields
+            fields:
+              intro_text_color:
+                label: Intro text color
+                type: color
+                placeholder: "#000000"
+                width: 1/3
+                help: Default is global text color
+              intro_bg_color:
+                label: Intro background color
+                type: color
+                placeholder: "#FFFFFF"
+                width: 1/3
+                help: Default is global bg color
+              intro_bg_image:
+                type: files
+                label: Intro bg image
+                multiple: false
+                help: Optional / PNG image, 512x512px
+                width: 1/3
+          content:
+            type: fields
+            fields:
+              line:
+                type: line
+              intro_categories:
+                label: Global Project categories
+                type: headline
+                help: |
+                  Used as filters for projects
+              categories_toggle:
+                type: toggle
+                label: Enable project categories
+              categories:
+                label: Project categories
+                type: structure
+                when:
+                  categories_toggle: true
+                fields:
+                  category_title:
+                    label: Title
+                    type: text
+      sidebar:
+        width: 1/3
+        sections:
+          colors:
+            type: fields
+            fields:
+              global_settings:
+                label: Global settings
+                type: headline
+                help: These settings will be applied for **every page**
+              bg_color:
+                type: color
+                label: Global background color
+                format: rgb
+                placeholder: rgb(255 255 255)
+                help: Default is white
+              text_color:
+                label: Global text color
+                type: color
+                format: rgb
+                placeholder: rgb(0 0 0)
+                help: Default is black
+              favicon:
+                type: files
+                label: Favicon image
+                multiple: false
+                help: PNG image, 512x512px
+              header_links:
+                label: Header external links
+                type: structure
+                help: Displayed at the top right bar
+                max: 3
+                fields:
+                  link_title:
+                    label: Title
+                    type: text
+                    required: true
+                  link_url:
+                    label: URL
+                    type: url
+                    required: true
+  seo: seo/page

@@ -1,0 +1,81 @@
+title: Project page
+num: zero
+
+status:
+  unlisted: false
+  listed:
+    label: Published
+    text: The article is online and listed
+
+options:
+  changeTemplate: false
+  preview: false
+
+tabs:
+  content:
+    label: Content
+    icon: text
+    columns:
+      main:
+        width: 1/2
+        sections:
+          info:
+            type: fields
+            fields:
+              author:
+                type: users
+                required: true
+                default: true
+                disabled: true
+                help: System field
+              name:
+                label: Name
+                type: text
+                required: true
+                width: 1/2
+              surname:
+                label: Surname
+                type: text
+                required: true
+                width: 1/2
+              project_title:
+                label: Project title
+                type: text
+                required: true
+              tags:
+                type: project-category
+              about:
+                label: Project description
+                type: textarea
+                required: true
+                buttons:
+                  - link
+              external_link:
+                label: External link
+                type: structure
+                help: Optional external link displayed below project description
+                max: 3
+                fields:
+                  link_title:
+                    label: Title
+                    type: text
+                    required: true
+                  link_url:
+                    label: URL
+                    type: url
+                    required: true
+      sidebar:
+        width: 1/2
+        sections:
+          thumb:
+            type: fields
+            fields:
+              cover:
+                label: Project cover
+                type: files
+                required: true
+                uploads: cover
+                multiple: false
+                help: Image only, max size 1 MB
+          content: sections/project_blocks
+  media: tabs/media

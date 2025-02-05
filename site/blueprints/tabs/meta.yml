@@ -1,0 +1,92 @@
+label: SEO
+columns:
+  - width: 1/1
+    sections:
+      head:
+        type: info
+        headline: Информация
+        text: |
+              Глобальные значения для мета-тегов и Open Graph разметки.
+              Данные значения можно переопределить для каждой страницы во вкладке SEO.
+  - width: 2/3
+    sections:
+      meta:
+        type: fields
+        fields:
+          canonical_url:
+            label: Каноническая ссылка
+            placeholder: Строительная компания Wanderbuild
+            type: text
+            help: Путь может быть, как абсолютным так и отсносительным
+            before: href="
+            after: '"'
+            width: 1/2
+          json_ld:
+            label: JSON LD
+            type: textarea
+            buttons: false
+            width: 1/2
+            size: medium
+            placeholder: '{"@context": "https://schema.org","@type": "Organization","url": "http://www.example.com","name": "Unlimited Ball Bearings Corp.","contactPoint": {"@type": "ContactPoint","telephone": "+1-401-555-1212","contactType": "Customer service"}}'
+          m_h:
+            label: Meta
+            type: headline
+            numbered: false
+          m_title:
+            label: Title
+            placeholder: Строительная компания Wanderbuild
+            type: text
+          m_desc:
+            label: Description
+            placeholder: Индивидуальные проекты частной и коммерческой недвижимости «под ключ»
+            type: textarea
+            size: small
+            buttons: false
+          og_h:
+            label: Open Graph
+            type: headline
+            numbered: false
+          og_title:
+            label: Title
+            placeholder: Wanderbuild
+            type: text
+            width: 1/2
+          og_site:
+            label: Site Name
+            placeholder: Строительная компания Wanderbuild
+            type: text
+            width: 1/2
+          og_desc:
+            label: Description
+            type: textarea
+            placeholder: Индивидуальные проекты частной и коммерческой недвижимости «под ключ»
+            size: small
+            buttons: false
+          tw_h:
+            label: Twitter Card
+            type: headline
+            numbered: false
+          tw_title:
+            label: Title
+            placeholder: Строительная компания Wanderbuild
+            type: text
+          tw_desc:
+            label: Description
+            placeholder: Индивидуальные проекты частной и коммерческой недвижимости «под ключ»
+            type: textarea
+            size: small
+            buttons: false
+  - width: 1/3
+    sections:
+      shareimg:
+        type: files
+        headline: Изображение для шаринга
+        empty: Изображение не выбрано
+        max: 1
+        layout: cards
+        info: "{{ file.dimensions }}"
+        sortable: false
+        template: share
+        image:
+          back: white
+          ratio: 16/9

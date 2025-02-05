@@ -1,0 +1,32 @@
+{
+  "name": "danilvladimirov/swarm-kirby-exhibition-website",
+  "type": "project",
+  "description": "Exhibition website theme for Kirby CMS.",
+  "keywords": [
+      "kirby",
+      "cms",
+      "template",
+      "theme"
+  ],
+  "license": "MIT",
+  "require": {
+      "php": ">=8.0.2 <8.3.0",
+      "getkirby/cms": "^3.9",
+      "twig/twig": "^3.0"
+  },
+  "require-dev": {
+      "symfony/var-dumper": "^6.3"
+  },
+  "config": {
+      "optimize-autoloader": true,
+      "allow-plugins": {
+          "getkirby/composer-installer": true
+      }
+  },
+  "scripts": {
+      "start": [
+        "Composer\\Config::disableProcessTimeout",
+        "@php -S localhost:8008 kirby/router.php"
+      ]
+  }
+}

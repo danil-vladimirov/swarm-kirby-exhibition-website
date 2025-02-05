@@ -1,0 +1,29 @@
+title: List of works
+
+status:
+  listed: false
+  drafts: false
+  unlisted: false
+
+options:
+  delete: false
+  changeStatus: false
+  changeSlug: false
+  changeTemplate: false
+  preview: false
+
+tabs:
+  pages:
+    label: List of works
+    sections:
+      drafts:
+        headline: Drafts
+        type: pages
+        status: draft
+        templates: project
+      published:
+        headline: Published
+        type: pages
+        status: listed
+        templates: project
+        sortBy: surname asc

@@ -1,0 +1,9 @@
+label: Media
+sections:
+  files:
+    headline: Files
+    empty: No files yet
+    type: files
+    layout: cards
+    size: tiny
+    info: "{{ file.width }}×{{ file.height }} | {{ file.niceSize }}"

@@ -1,0 +1,12 @@
+title: Main page showreel / Примеры работ на главной
+
+sections:
+  gallery:
+    headline: Gallery
+    type: files
+    template: gallery
+
+fields:
+  text:
+    label: Author / Автор
+    type: textarea

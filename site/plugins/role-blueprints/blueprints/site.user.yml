@@ -1,0 +1,29 @@
+title: Website
+
+options:
+  changeTitle:
+    "*": false
+    admin: true
+
+tabs:
+  pages:
+    label: Content
+    columns:
+      - width: 1/1
+        sections:
+          info:
+            headline: How to
+            type: info
+            text: |
+              Click **Add** button to create your personal page
+
+              On next pop-up window you will be asked to enter title for the page (Name Surname) in order to generate the URL of the page (/name-surname).
+              After that you will be redirected to the draft version of your page, fill everything in and publish your page.
+          projects:
+            headline: Project page
+            type: pages
+            template: ["project"]
+            parent: site.find("works")
+            max: 1
+            empty: Click Add to begin
+            image: page.cover.toFile()

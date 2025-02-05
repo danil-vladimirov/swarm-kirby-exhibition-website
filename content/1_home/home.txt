@@ -1,0 +1,128 @@
+Title: Home page
+
+----
+
+Intro-title: 
+
+----
+
+Intro-subtitle: 
+
+----
+
+Intro-text-color: 
+
+----
+
+Intro-bg-color: 
+
+----
+
+Intro-bg-image: 
+
+----
+
+Categories-toggle: false
+
+----
+
+Categories: 
+
+----
+
+Bg-color: 
+
+----
+
+Text-color: 
+
+----
+
+Favicon: 
+
+----
+
+Header-links: 
+
+----
+
+Metatitle: 
+
+----
+
+Metatemplate: 
+
+----
+
+Usetitletemplate: true
+
+----
+
+Metadescription: 
+
+----
+
+Ogtemplate: 
+
+----
+
+Useogtemplate: true
+
+----
+
+Ogdescription: 
+
+----
+
+Ogimage: 
+
+----
+
+Twittercardtype: 
+
+----
+
+Twitterauthor: 
+
+----
+
+Robotsindex: true
+
+----
+
+Robotsfollow: true
+
+----
+
+Robotsarchive: true
+
+----
+
+Robotsimageindex: true
+
+----
+
+Robotssnippet: true
+
+----
+
+Metainherit: 
+
+----
+
+Pathways: 
+
+----
+
+Intro: 
+
+----
+
+Images:
+
+- 3.png
+- cover.jpg
+
+----
+
+Uuid: Th7IAmT3wglnxtON

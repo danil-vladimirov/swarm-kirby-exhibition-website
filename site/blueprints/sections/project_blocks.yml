@@ -1,0 +1,16 @@
+type: fields
+fields:
+  info:
+    label: Adding content
+    type: info
+    text: |
+      Click **Add** button to add a content block
+      Next select a content type (Image or Video). You can add up to 10 blocks.
+  blocks:
+    label: Content
+    type: blocks
+    required: true
+    max: 10
+    fieldsets:
+      - image
+      - video

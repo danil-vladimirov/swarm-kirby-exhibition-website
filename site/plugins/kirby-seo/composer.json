@@ -1,0 +1,41 @@
+{
+  "name": "tobimori/kirby-seo",
+  "description": "The ultimate Kirby SEO toolkit",
+  "type": "kirby-plugin",
+  "version": "1.1.2",
+  "license": "MIT",
+  "homepage": "https://github.com/tobimori/kirby-seo#readme",
+  "authors": [
+    {
+      "name": "Tobias Möritz",
+      "email": "tobias@moeritz.io"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "tobimori\\Seo\\": "classes"
+    }
+  },
+  "require": {
+    "php": ">=8.1.0",
+    "getkirby/composer-installer": "^1.2.1",
+    "spatie/schema-org": "^3.14"
+  },
+  "require-dev": {
+    "getkirby/cms": "^4.0",
+    "getkirby/cli": "^1.2",
+    "friendsofphp/php-cs-fixer": "^3.48"
+  },
+  "scripts": {
+    "dist": "composer install --no-dev --optimize-autoloader"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "getkirby/composer-installer": true
+    }
+  },
+  "extra": {
+    "kirby-cms-path": false
+  }
+}

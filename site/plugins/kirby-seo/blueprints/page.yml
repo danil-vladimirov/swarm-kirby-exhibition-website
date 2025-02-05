@@ -1,0 +1,29 @@
+label: metadata-site
+icon: search
+
+columns:
+  main:
+    width: 7/12
+    fields:
+      metaGroup: seo/fields/meta-group
+      ogGroup: seo/fields/og-group
+      robots: seo/fields/robots
+      metaInherit:
+        label: inherit-settings
+        type: multiselect
+        help: inherit-settings-help
+        options:
+          metaTemplate: "{{ t('meta-title-template') }}"
+          metaDescription: "{{ t('meta-description') }}"
+          ogTemplate: "{{ t('og-title-template') }}"
+          ogDescription: "{{ t('og-description') }}"
+          ogImage: "{{ t('og-image') }}"
+          twitterCardType: "{{ t('twitter-card-type') }}"
+          twitterAuthor: "{{ t('twitter-author') }}"
+          robots: '{{ t("robots") }}'
+  sidebar:
+    width: 5/12
+    sticky: true
+    sections:
+      seoPreview:
+        type: seo-preview

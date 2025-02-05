@@ -1,0 +1,30 @@
+{
+  "name": "kirby-embed",
+  "version": "0.0.1",
+  "description": "Embed field for Kirby 3",
+  "main": "index.js",
+  "author": "Sylvain Julé",
+  "license": "MIT",
+  "scripts": {
+    "dev": "kirbyup src/index.js --watch",
+    "build": "kirbyup src/index.js",
+    "lint": "eslint \"src/**/*.{js,vue}\"",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write \"src/**/*.{css,js,vue}\""
+  },
+  "posthtml": {
+    "recognizeSelfClosing": true
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 11"
+  ],
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "kirbyup": "^3.0.1",
+    "prettier": "^2.4.1"
+  }
+}

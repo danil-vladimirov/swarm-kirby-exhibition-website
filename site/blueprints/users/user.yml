@@ -1,0 +1,13 @@
+title: User
+
+permissions:
+  access:
+    panel: true
+    site: true
+    settings: false
+    users: false
+  # ...
+  user:
+    changeRole: false
+    delete: false
+    update: false # else a user will be able to edit the page they have access to on their profile
