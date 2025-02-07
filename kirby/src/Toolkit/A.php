@@ -508,7 +508,7 @@ class A
 				) {
 					$merged[] = $value;
 
-				// recursively merge the two array values
+					// recursively merge the two array values
 				} elseif (
 					is_array($value) === true &&
 					isset($merged[$key]) === true &&
@@ -516,7 +516,7 @@ class A
 				) {
 					$merged[$key] = static::merge($merged[$key], $value, $mode);
 
-				// simply overwrite with the value from the second array
+					// simply overwrite with the value from the second array
 				} else {
 					$merged[$key] = $value;
 				}
@@ -738,12 +738,18 @@ class A
 	/**
 	 * Returns a number of random elements from an array,
 	 * either in original or shuffled order
+	 *
+	 * @throws \Exception When $count is larger than array length
 	 */
 	public static function random(
 		array $array,
 		int $count = 1,
 		bool $shuffle = false
 	): array {
+		if ($count > count($array)) {
+			throw new InvalidArgumentException('$count is larger than available array items');
+		}
+
 		if ($shuffle === true) {
 			return array_slice(self::shuffle($array), 0, $count);
 		}

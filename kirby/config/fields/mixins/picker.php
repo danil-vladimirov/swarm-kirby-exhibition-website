@@ -2,6 +2,7 @@
 
 use Kirby\Toolkit\I18n;
 use Kirby\Toolkit\Str;
+use Kirby\Uuid\Uuids;
 
 return [
 	'props' => [
@@ -22,7 +23,7 @@ return [
 		/**
 		 * Info text for each item
 		 */
-		'info' => function (string $info = null) {
+		'info' => function (string|null $info = null) {
 			return $info;
 		},
 
@@ -36,14 +37,14 @@ return [
 		/**
 		 * The minimum number of required selected
 		 */
-		'min' => function (int $min = null) {
+		'min' => function (int|null $min = null) {
 			return $min;
 		},
 
 		/**
 		 * The maximum number of allowed selected
 		 */
-		'max' => function (int $max = null) {
+		'max' => function (int|null $max = null) {
 			return $max;
 		},
 
@@ -57,7 +58,7 @@ return [
 		/**
 		 * Query for the items to be included in the picker
 		 */
-		'query' => function (string $query = null) {
+		'query' => function (string|null $query = null) {
 			return $query;
 		},
 
@@ -75,13 +76,17 @@ return [
 		 * @param string $store 'uuid'|'id'
 		 */
 		'store' => function (string $store = 'uuid') {
-			return Str::lower($store);
+			// fall back to ID, if UUIDs globally disabled
+			return match (Uuids::enabled()) {
+				false   => 'id',
+				default => Str::lower($store)
+			};
 		},
 
 		/**
 		 * Main text for each item
 		 */
-		'text' => function (string $text = null) {
+		'text' => function (string|null $text = null) {
 			return $text;
 		},
 	],

@@ -21,6 +21,8 @@
 	"copy": "Kopiëren",
 	"copy.all": "Kopieer alles",
 	"copy.success": "{count} gekopieerd!",
+	"copy.success.multiple": "{count} gekopieerd!",
+	"copy.url": "Copy URL",
 	"create": "Aanmaken",
 	"custom": "Custom",
 
@@ -90,6 +92,12 @@
 
 	"error.cache.type.invalid": "Ongeldig cache type \"{type}\"",
 
+	"error.content.lock.delete": "The version is locked and cannot be deleted",
+	"error.content.lock.move": "The source version is locked and cannot be moved",
+	"error.content.lock.publish": "This version is already published",
+	"error.content.lock.replace": "The version is locked and cannot be replaced",
+	"error.content.lock.update": "The version is locked and cannot be updated",
+
 	"error.email.preset.notFound": "De e-mailvoorinstelling \"{name}\" kan niet worden gevonden",
 
 	"error.field.converter.invalid": "Ongeldige converter \"{converter}\"",
@@ -118,6 +126,7 @@
 	"error.file.name.missing": "De bestandsnaam mag niet leeg zijn",
 	"error.file.notFound": "Het bestand kan niet worden gevonden",
 	"error.file.orientation": "De oriëntatie van de afbeelding moet \"{orientation}\" zijn",
+	"error.file.sort.permission": "You are not allowed to change the sorting of \"{filename}\"",
 	"error.file.type.forbidden": "Je hebt geen rechten om {type} bestanden up te loaden",
 	"error.file.type.invalid": "Ongeldig bestands type: {type}",
 	"error.file.undefined": "Het bestand kan niet worden gevonden",
@@ -126,9 +135,12 @@
 	"error.form.notSaved": "Het formulier kon niet worden opgeslagen",
 
 	"error.language.code": "Vul een geldige code voor deze taal in",
+	"error.language.create.permission": "Je hebt geen rechten om een taal toe te voegen",
+	"error.language.delete.permission": "Je hebt geen rechten om een taal te verwijderen",
 	"error.language.duplicate": "De taal bestaat al",
 	"error.language.name": "Vul een geldige naam voor deze taal in",
 	"error.language.notFound": "De taal kan niet worden gevonden",
+	"error.language.update.permission": "Je hebt geen rechten om deze taal te updaten",
 
 	"error.layout.validation.block": "Er is een fout opgetreden bij het \"{field}\" veld in blok {blockIndex} in het \"{fieldset}\" bloktype in layout {layoutIndex}",
 	"error.layout.validation.settings": "Er is een fout gevonden in de instellingen van ontwerp {index} ",
@@ -165,6 +177,7 @@
 	"error.page.move.ancestor": "De pagina kan niet in zichzelf worden verplaatst",
 	"error.page.move.directory": "De page map kan niet worden verplaatst",
 	"error.page.move.duplicate": "Er bestaat al een subpagina met de URL-appendix \"{slug}\"",
+	"error.page.move.noSections": "The page \"{parent}\" cannot be a parent of any page because it lacks any pages sections in its blueprint",
 	"error.page.move.notFound": "De verplaatste pagina kan niet gevonden worden",
 	"error.page.move.permission": "Je hebt geen rechten om \"{slug}\" te verplaatsen",
 	"error.page.move.template": "De \"{template}\" template is niet toegestaan als een subpagina van \"{parent}\"",
@@ -294,6 +307,9 @@
 	"field.blocks.heading.name": "Koptekst",
 	"field.blocks.heading.text": "Tekst",
 	"field.blocks.heading.placeholder": "Koptekst ...",
+	"field.blocks.figure.back.plain": "Plain",
+	"field.blocks.figure.back.pattern.light": "Pattern (light)",
+	"field.blocks.figure.back.pattern.dark": "Pattern (dark)",
 	"field.blocks.image.alt": "Alternatieve tekst",
 	"field.blocks.image.caption": "Beschrijving",
 	"field.blocks.image.crop": "Uitsnede",
@@ -331,6 +347,7 @@
 	"field.blocks.video.url.placeholder": "https://youtube.com/?v=",
 
 	"field.files.empty": "Nog geen bestanden geselecteerd",
+	"field.files.empty.single": "No file selected yet",
 
 	"field.layout.change": "Verander layout",
 	"field.layout.delete": "Verwijder indeling",
@@ -342,12 +359,14 @@
 	"field.object.empty": "Nog geen informatie",
 
 	"field.pages.empty": "Nog geen pagina's geselecteerd",
+	"field.pages.empty.single": "No page selected yet",
 
 	"field.structure.delete.confirm": "Wil je deze rij verwijderen?",
 	"field.structure.delete.confirm.all": "Weet je zeker dat je alle items wil verwijderen?",
 	"field.structure.empty": "Nog geen items",
 
 	"field.users.empty": "Nog geen gebruikers geselecteerd",
+	"field.users.empty.single": "No user selected yet",
 
 	"fields.empty": "Nog geen velden",
 
@@ -365,6 +384,13 @@
 	"files.empty": "Nog geen bestanden",
 
 	"filter": "Filter",
+
+	"form.discard": "Discard changes",
+	"form.discard.confirm": "Do you really want to <strong>discard all your changes</strong>?",
+	"form.locked": "This content is disabled for you as it is currently edited by another user",
+	"form.unsaved": "The current changes have not yet been saved",
+	"form.preview": "Preview changes",
+	"form.preview.draft": "Preview draft",
 
 	"hide": "Verberg",
 	"hour": "Uur",
@@ -441,6 +467,8 @@
 	"license.status.missing.bubble": "Klaar om je website te lanceren?",
 	"license.status.missing.info": "Geen geldige licentie",
 	"license.status.missing.label": "Activeer je licentie",
+	"license.status.unknown.info": "The license status is unknown",
+	"license.status.unknown.label": "Unknown license",
 	"license.manage": "Beheer je licenties",
 	"license.purchased": "Gekocht",
 	"license.success": "Bedankt dat je Kirby ondersteunt",
@@ -453,6 +481,9 @@
 
 	"lock.unsaved": "Niet opgeslagen wijzigingen",
 	"lock.unsaved.empty": "Er zijn geen niet opgeslagen wijzigingen meer",
+	"lock.unsaved.files": "Unsaved files",
+	"lock.unsaved.pages": "Unsaved pages",
+	"lock.unsaved.users": "Unsaved accounts",
 	"lock.isLocked": "Niet opgeslagen wijzigingen door {email}",
 	"lock.unlock": "Ontgrendelen",
 	"lock.unlock.submit": "Niet-opgeslagen wijzigingen ontgrendelen en overschrijven met <strong>{email}</strong>",
@@ -575,6 +606,10 @@
 	"plugins": "Plugins",
 	"prev": "Vorige",
 	"preview": "Voorbeeld",
+
+	"publish": "Publish",
+	"published": "Gepubliceerd",
+
 	"remove": "Verwijder",
 	"rename": "Hernoem",
 	"renew": "Verlengen",
@@ -594,7 +629,9 @@
 	"role.nobody.title": "Niemand",
 
 	"save": "Opslaan",
+	"saved": "Saved",
 	"search": "Zoeken",
+	"searching": "Searching",
 	"search.min": "Voer {min} tekens in om te zoeken",
 	"search.all": "Laat alle {count} resultaten zien",
 	"search.results.none": "Geen resultaten",
@@ -617,8 +654,9 @@
 	"stats.empty": "Geen rapporten",
 	"status": "Status",
 
-	"system.info.copy": "Copy info",
-	"system.info.copied": "System info copied",
+	"system.info.copy": "Kopieer informatie",
+	"system.info.copied": "Systeem informatie gekopieerd",
+	"system.issues.api.methods": "Your server does not support PATCH requests",
 	"system.issues.content": "De content map lijkt zichtbaar te zijn",
 	"system.issues.eol.kirby": "De geïnstalleerde Kirby versie is niet meer actueel en zal geen verdere beveiligingsupdates meer ontvangen.",
 	"system.issues.eol.plugin": "De geïnstalleerde versie van plugin { plugin } is niet meer actueel en zal geen verdere beveiligingsupdates meer ontvangen.",
@@ -643,6 +681,12 @@
 	"tel": "Telefoon",
 	"tel.placeholder": "+49123456789",
 	"template": "Template",
+
+	"theme": "Theme",
+	"theme.light": "Lights on",
+	"theme.dark": "Lights off",
+	"theme.automatic": "Match system default",
+
 	"title": "Titel",
 	"today": "Vandaag",
 
@@ -712,10 +756,13 @@
 	"users": "Gebruikers",
 
 	"version": "Kirby-versie",
+	"version.changes": "Changed version",
+	"version.compare": "Compare versions",
 	"version.current": "Huidige versie",
 	"version.latest": "Laatste versie",
 	"versionInformation": "Versie informatie",
 
+	"view": "View",
 	"view.account": "Jouw account",
 	"view.installation": "Installatie",
 	"view.languages": "Talen",

@@ -124,9 +124,17 @@ class Field
 	 */
 	public function isEmpty(): bool
 	{
+		$value = $this->value;
+
+		if (is_string($value) === true) {
+			$value = trim($value);
+		}
+
 		return
-			empty($this->value) === true &&
-			in_array($this->value, [0, '0', false], true) === false;
+			$value === null ||
+			$value === '' ||
+			$value === [] ||
+			$value === '[]';
 	}
 
 	/**
@@ -202,7 +210,7 @@ class Field
 	 * the modified field will be returned. Otherwise it
 	 * will return the field value.
 	 */
-	public function value(string|Closure $value = null): mixed
+	public function value(string|Closure|null $value = null): mixed
 	{
 		if ($value === null) {
 			return $this->value;

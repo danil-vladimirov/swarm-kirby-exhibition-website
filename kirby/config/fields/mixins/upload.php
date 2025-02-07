@@ -23,7 +23,11 @@ return [
 				$uploads = [];
 			}
 
-			$uploads['accept'] = '*';
+			$uploads['accept']  = '*';
+
+			if ($preview = $this->image) {
+				$uploads['preview'] = $preview;
+			}
 
 			if ($template = $uploads['template'] ?? null) {
 				// get parent object for upload target
@@ -70,7 +74,7 @@ return [
 				return $map($file, $parent);
 			});
 		},
-		'uploadParent' => function (string $parentQuery = null) {
+		'uploadParent' => function (string|null $parentQuery = null) {
 			$parent = $this->model();
 
 			if ($parentQuery) {

@@ -6,6 +6,7 @@ use Kirby\Data\Data;
 use Kirby\Exception\Exception;
 use Kirby\Exception\InvalidArgumentException;
 use Kirby\Exception\LogicException;
+use Kirby\Exception\PermissionException;
 use Kirby\Filesystem\F;
 use Kirby\Toolkit\Locale;
 use Kirby\Toolkit\Str;
@@ -145,8 +146,17 @@ class Language
 	 */
 	public static function create(array $props): static
 	{
+		$kirby = App::instance();
+		$user  = $kirby->user();
+
+		if (
+			$user === null ||
+			$user->role()->permissions()->for('languages', 'create') === false
+		) {
+			throw new PermissionException(['key' => 'language.create.permission']);
+		}
+
 		$props['code'] = Str::slug($props['code'] ?? null);
-		$kirby         = App::instance();
 		$languages     = $kirby->languages();
 
 		// make the first language the default language
@@ -204,7 +214,15 @@ class Language
 	public function delete(): bool
 	{
 		$kirby = App::instance();
+		$user  = $kirby->user();
 		$code  = $this->code();
+
+		if (
+			$user === null ||
+			$user->role()->permissions()->for('languages', 'delete') === false
+		) {
+			throw new PermissionException(['key' => 'language.delete.permission']);
+		}
 
 		if ($this->isDeletable() === false) {
 			throw new Exception('The language cannot be deleted');
@@ -326,7 +344,7 @@ class Language
 	 *
 	 * @param int $category If passed, returns the locale for the specified category (e.g. LC_ALL) as string
 	 */
-	public function locale(int $category = null): array|string|null
+	public function locale(int|null $category = null): array|string|null
 	{
 		if ($category !== null) {
 			return $this->locale[$category] ?? $this->locale[LC_ALL] ?? null;
@@ -495,15 +513,24 @@ class Language
 	 * Update language properties and save them
 	 * @internal
 	 */
-	public function update(array $props = null): static
+	public function update(array|null $props = null): static
 	{
+		$kirby = App::instance();
+		$user  = $kirby->user();
+
+		if (
+			$user === null ||
+			$user->role()->permissions()->for('languages', 'update') === false
+		) {
+			throw new PermissionException(['key' => 'language.update.permission']);
+		}
+
 		// don't change the language code
 		unset($props['code']);
 
 		// make sure the slug is nice and clean
 		$props['slug'] = Str::slug($props['slug'] ?? null);
 
-		$kirby   = App::instance();
 		$updated = $this->clone($props);
 
 		if (isset($props['translations']) === true) {

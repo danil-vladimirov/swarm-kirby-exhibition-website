@@ -5,6 +5,8 @@ use Kirby\Cms\Find;
 use Kirby\Toolkit\I18n;
 
 return [
+	// @codeCoverageIgnoreStart
+	// TODO: move to controller class and add unit tests
 	'tree' => [
 		'pattern' => 'site/tree',
 		'action'  => function () {
@@ -62,5 +64,27 @@ return [
 
 			return $pages;
 		}
+	],
+	'tree.parents' => [
+		'pattern' => 'site/tree/parents',
+		'action'  => function () {
+			$kirby   = App::instance();
+			$request = $kirby->request();
+			$root    = $request->get('root');
+			$page    = $kirby->page($request->get('page'));
+			$parents = $page?->parents()->flip()->values(
+				fn ($parent) => $parent->uuid()?->toString() ?? $parent->id()
+			) ?? [];
+
+			// if root is included, add the site as top-level parent
+			if ($root === 'true') {
+				array_unshift($parents, $kirby->site()->uuid()?->toString() ?? '/');
+			}
+
+			return [
+				'data' => $parents
+			];
+		}
 	]
+	// @codeCoverageIgnoreEnd
 ];

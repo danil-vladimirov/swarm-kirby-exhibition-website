@@ -22,7 +22,7 @@ use Throwable;
  */
 class License
 {
-	protected const HISTORY = [
+	public const HISTORY = [
 		'3' => '2019-02-05',
 		'4' => '2023-11-28'
 	];
@@ -42,8 +42,9 @@ class License
 		protected string|null $date = null,
 		protected string|null $signature = null,
 	) {
-		// normalize the email address
-		$this->email = $this->email === null ? null : $this->normalizeEmail($this->email);
+		// normalize arguments
+		$this->code  = $this->code !== null ? trim($this->code) : null;
+		$this->email = $this->email !== null ? $this->normalizeEmail($this->email) : null;
 	}
 
 	/**

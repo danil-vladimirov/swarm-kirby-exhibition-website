@@ -28,7 +28,7 @@ return [
 		/**
 		 * Filters all files by template and also sets the template, which will be used for all uploads
 		 */
-		'template' => function (string $template = null) {
+		'template' => function (string|null $template = null) {
 			return $template;
 		},
 		/**
@@ -194,6 +194,7 @@ return [
 				'multiple'   => $multiple,
 				'max'        => $max,
 				'api'        => $this->parent->apiUrl(true) . '/files',
+				'preview'    => $this->image,
 				'attributes' => [
 					// TODO: an edge issue that needs to be solved:
 					//		 if multiple users load the same section
