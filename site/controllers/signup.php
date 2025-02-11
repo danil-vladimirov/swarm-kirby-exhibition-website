@@ -3,10 +3,10 @@
 use Kirby\Exception\PermissionException;
 
 return function ($kirby) {
-    // send already logged-in user somewhere else
-    if ($kirby->user()) {
-        go('panel/login');
-    }
+    // send already logged-in user somewhere else if needed
+    // if ($kirby->user()) {
+    //     go('panel/login');
+    // }
 
     // create empty error/success
     $errors = [];

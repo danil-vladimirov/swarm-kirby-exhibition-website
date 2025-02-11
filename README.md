@@ -10,6 +10,9 @@ Swarm is an exhibitions website builder for Designers, Artists, and Visual Creat
   <a href="https://swarm-demo.danilvladimirov.co.uk/">
     <img src="https://img.shields.io/static/v1?label=&message=View%20Demo&style=for-the-badge&color=black" />
   </a>
+  <a href="https://swarm.danilvladimirov.co.uk/">
+    <img src="https://img.shields.io/static/v1?label=&message=Learn%20More&style=for-the-badge&color=pink" />
+  </a>
 </p>
 
 # Features
