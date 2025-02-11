@@ -12,6 +12,10 @@ return [
     'methods' => ['password']
   ],
 
+  'panel' => [
+    'install' => true
+  ],
+
   'routes' => [
     [
       'pattern' => 'works/(:any)',
