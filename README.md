@@ -33,9 +33,12 @@ Create a website for a group exhibition, upload work, and share it with the worl
 
 # Installation
 
-1. Download the zip archive with the clone of this repository, extract it to the web server you want to run it on.
-2. Go to `/panel` and follow the installation instructions.
-3. Upload and share your work!
+### Web server
+
+1. Download latest pre-built release in the [Releases](https://github.com/danil-vladimirov/swarm-kirby-exhibition-website/releases) section.
+2. Extract it and upload the contents to the web server you want to run it on.
+3. Go to `/panel` and follow the installation instructions.
+4. Upload and share your work!
 
 ### Requirements
 
@@ -45,7 +48,7 @@ Create a website for a group exhibition, upload work, and share it with the worl
 
 # Local configuration
 
-Download the zip archive with the copy of this repository, and extract it to your local machine. The easiest way to run Kirby locally is to use PHP's built-in server with Kirby's router. Go to extracted folder in terminal and run this line:
+Download the zip archive with the copy of this repository, extract it, and run `composer install` within the project root directory. The easiest way to run Kirby locally is to use PHP's built-in server with Kirby's router.
 
 ```
 php -S localhost:8000 kirby/router.php
