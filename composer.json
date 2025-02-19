@@ -1,25 +1,13 @@
 {
-    "name": "getkirby/plainkit",
-    "description": "Kirby Plainkit",
+    "name": "danil-vladimirov/swarm-kirby-exhibition-website",
+    "description": "Exhibition website theme for Kirby CMS.",
     "type": "project",
     "keywords": [
         "kirby",
         "cms",
-        "plainkit"
+        "theme",
+        "exhibition"
     ],
-    "authors": [
-        {
-            "name": "Bastian Allgeier",
-            "email": "bastian@getkirby.com",
-            "homepage": "https://getkirby.com"
-        }
-    ],
-    "homepage": "https://getkirby.com",
-    "support": {
-        "email": "support@getkirby.com",
-        "forum": "https://forum.getkirby.com",
-        "source": "https://github.com/getkirby/plainkit"
-    },
     "require": {
         "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
         "getkirby/cms": "^4.0"
