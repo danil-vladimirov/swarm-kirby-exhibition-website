@@ -56,6 +56,12 @@ php -S localhost:8000 kirby/router.php
 
 Get more information at [Kirby website](https://getkirby.com/docs/guide/quickstart)
 
+### Composer
+
+```
+composer create-project danil-vladimirov/swarm-kirby-exhibition-website
+```
+
 ### Tailwind CSS
 
 Make sure that you have Node.js installed on your machine. 
