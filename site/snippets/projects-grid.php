@@ -10,7 +10,7 @@
                 <div class="w-full">
                     <div class="w-full overflow-hidden">
                         <?php if ($img = $work->cover()->toFile()): ?>
-                            <img src="<?= $img->resize(400)->url() ?>" class="relative w-full" alt="<?= $work->name() ?> <?= $work->surname() ?>">
+                            <?= $img->tag() ?>
                         <?php endif ?>
                     </div>
                     <div class="flex flex-col mt-2">

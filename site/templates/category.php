@@ -41,7 +41,7 @@
                     <div class="w-full">
                         <div class="w-full overflow-hidden">
                             <?php foreach ($article->cover()->toFiles() as $img): ?>
-                                <img src="<?= $img->resize(400)->url() ?>" class="relative w-full" alt="">
+                                <?= $img->tag() ?>
                             <?php endforeach ?>
                         </div>
                         <div class="flex flex-col mt-2">

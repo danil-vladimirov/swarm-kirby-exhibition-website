@@ -4,6 +4,8 @@
                 </span>
             </div>
 
+            <?= js('assets/js/lazysizes.min.js') ?>
+
         </div>
     </body>
 </html>

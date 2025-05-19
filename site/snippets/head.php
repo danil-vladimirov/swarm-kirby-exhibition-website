@@ -35,6 +35,17 @@ endif;
 
     <?= css('assets/css/styles.css') ?>
 
+    <style>
+        .lazyload,
+        .lazyloading {
+            opacity: 0;
+        }
+        .lazyloaded {
+            opacity: 1;
+            transition: opacity 300ms;
+        }
+    </style>
+
     <?php if($image = page('home')->favicon()->toFile()): ?>
         <link rel="icon" type="image/png" sizes="32x32" href="<?= $image->resize(32)->url() ?>">
         <link rel="icon" type="image/png" sizes="96x96" href="<?= $image->resize(96)->url() ?>">
