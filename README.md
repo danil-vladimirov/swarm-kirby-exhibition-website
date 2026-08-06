@@ -52,7 +52,7 @@ Create a website for a group exhibition, upload work, and share it with the worl
 Download the zip archive with the copy of this repository, extract it, and run `composer install` within the project root directory. The easiest way to run Kirby locally is to use PHP's built-in server with Kirby's router.
 
 ```
-composer start
+php -S localhost:8000 kirby/router.php
 ```
 
 Get more information at [Kirby website](https://getkirby.com/docs/guide/quickstart)
