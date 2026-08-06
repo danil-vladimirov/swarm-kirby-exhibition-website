@@ -119,10 +119,3 @@ Intro:
 ----
 
 Images:
-
-- 3.png
-- cover.jpg
-
-----
-
-Uuid: Th7IAmT3wglnxtON

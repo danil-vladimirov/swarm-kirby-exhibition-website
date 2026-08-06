@@ -14,6 +14,16 @@ return function ($kirby) {
 
     // the form was sent
     if (get('register') && $kirby->request()->is('POST')) {
+        if (site()->portfolio_mode()->toBool() === true) {
+            $errors[] = 'Registration is disabled in Portfolio Mode.';
+
+            return [
+                'errors' => $errors,
+                'success' => $success,
+                'data' => [],
+            ];
+        }
+
         // honeypot field filled?
         if(!empty(get('website'))) {
             go('/');
@@ -25,18 +35,25 @@ return function ($kirby) {
             $data = [
                 'email' => get('email'),
                 'password' => get('password'),
+                'validate' => get('validate'),
             ];
             // validation rules
             $rules = [
                 'email' => ['required', 'email'],
+                'password' => ['required'],
             ];
             // error messages
             $messages = [
                 'email' => 'Please enter a valid email address',
+                'password' => 'Please enter a password',
             ];
             // check if data is valid
             if ($invalid = invalid($data, $rules, $messages)) {
                 $errors = $invalid;
+            } elseif (strlen($data['password']) < 8) {
+                $errors[] = 'Please enter a password with at least 8 characters';
+            } elseif ($data['password'] !== $data['validate']) {
+                $errors[] = 'The passwords do not match';
 
             // the data is fine, let's create a user
             } else {
@@ -70,6 +87,6 @@ return function ($kirby) {
     return [
         'errors' => $errors,
         'success' => $success,
+        'data' => $data ?? [],
     ];
 };
-

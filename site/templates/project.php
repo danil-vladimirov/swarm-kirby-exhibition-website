@@ -38,9 +38,11 @@
                     <h1><?= $page->project_title() ?></h1>
                 </div>
 
-                <div class="text-3xl">
-                    <h2><?= $page->name() ?> <?= $page->surname() ?></h2>
-                </div>
+                <?php if (site()->portfolio_mode()->toBool() === false): ?>
+                    <div class="text-3xl">
+                        <h2><?= $page->name() ?> <?= $page->surname() ?></h2>
+                    </div>
+                <?php endif ?>
 
                 <div class="pt-4 text-lg font-medium leading-tight">
                     <p>

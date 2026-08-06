@@ -4,7 +4,7 @@
     <strong>CSS powered by <a href="https://tailwindcss.com">Tailwind</a></strong><br />
 </p>
 
-Swarm is an exhibitions website builder for Designers, Artists, and Visual Creators to showcase works online. Open-source and powered by Kirby 4. You can learn more about Kirby at [getkirby.com](https://getkirby.com)
+Swarm is an exhibitions website builder for Designers, Artists, and Visual Creators to showcase works online. Open-source and powered by Kirby 5. You can learn more about Kirby at [getkirby.com](https://getkirby.com)
 
 <p>
   <a href="https://swarm-demo.danilvladimirov.co.uk/">
@@ -22,6 +22,7 @@ Create a website for a group exhibition, upload work, and share it with the worl
 - Simple content management — Powered by [Kirby](https://getkirby.com), accessible at `yourwebsite.com/panel`
 - Project page — Add project name, title, description, images, videos, and external links
 - User registration — Allow (or disallow) participants to sign up and upload their work
+- Portfolio Mode — Use Swarm as a personal portfolio: registration is disabled, project titles become the main labels, and published projects can be sorted manually in the Panel
 - Customisable design — Set background and text colors, upload a favicon and OG image
 - Project categories — Organise exhibition works with custom categories
 - SEO management powered by [Kirby SEO](https://plugins.andkindness.com/seo)
@@ -42,7 +43,7 @@ Create a website for a group exhibition, upload work, and share it with the worl
 
 ### Requirements
 
-- PHP 8.2 or higher
+- PHP 8.3 or higher
 - A webserver
 - Projects to share!
 
@@ -51,7 +52,7 @@ Create a website for a group exhibition, upload work, and share it with the worl
 Download the zip archive with the copy of this repository, extract it, and run `composer install` within the project root directory. The easiest way to run Kirby locally is to use PHP's built-in server with Kirby's router.
 
 ```
-php -S localhost:8000 kirby/router.php
+composer start
 ```
 
 Get more information at [Kirby website](https://getkirby.com/docs/guide/quickstart)
@@ -86,8 +87,8 @@ npm run build
 
 ## License
 
-Swarm is essentially a theme for Kirby 4 — built to make the most of Kirby’s flexibility. It follows the same licensing terms as Kirby 4, outlined in the [Kirby End User License Agreement](https://getkirby.com/license).
-Kirby 4 is not free software. You can use it for evaluation, but to run it on a live site, you’ll need to purchase a license from [getkirby.com](https://getkirby.com).
+Swarm is essentially a theme for Kirby 5 — built to make the most of Kirby’s flexibility. It follows the same licensing terms as Kirby 5, outlined in the [Kirby End User License Agreement](https://getkirby.com/license).
+Kirby 5 is not free software. You can use it for evaluation, but to run it on a live site, you’ll need to purchase a license from [getkirby.com](https://getkirby.com).
 
 Everything in this repository (apart from Kirby’s core code and Kirby SEO plugin) is open-source under the [MIT License](https://opensource.org/licenses/MIT).
 That means you’re free to modify and share it, as long as you include the original license and copyright notice.

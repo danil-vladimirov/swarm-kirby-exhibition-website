@@ -2,7 +2,11 @@
 
     <div class="relative px-4 pb-4 grid grid-cols-2 gap-y-4 gap-x-4 md:grid-cols-3 xl:grid-cols-4">
 
-    <?php $works = page('works')->children()->published()->sortBy('surname', 'asc');
+    <?php
+    $portfolioMode = site()->portfolio_mode()->toBool();
+    $works = page('works')->children()->published();
+    $works = $portfolioMode === true ? $works : $works->sortBy('surname', 'asc');
+
     foreach ($works as $work): ?>
 
         <a href="<?= $work->url() ?>" class="relative">
@@ -14,8 +18,12 @@
                         <?php endif ?>
                     </div>
                     <div class="flex flex-col mt-2">
-                        <div class="flex font-medium text-lg md:text-2xl"><?= $work->name() ?> <?= $work->surname() ?></div>
-                        <div class="flex"><?= $work->project_title() ?></div>
+                        <?php if ($portfolioMode === true): ?>
+                            <div class="flex font-medium text-lg md:text-2xl"><?= $work->project_title() ?></div>
+                        <?php else: ?>
+                            <div class="flex font-medium text-lg md:text-2xl"><?= $work->name() ?> <?= $work->surname() ?></div>
+                            <div class="flex"><?= $work->project_title() ?></div>
+                        <?php endif ?>
                     </div>
                 </div>
             </div>

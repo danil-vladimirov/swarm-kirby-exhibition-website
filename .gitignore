@@ -10,6 +10,22 @@ Icon
 /media/*
 !/media/index.html
 
+# User-generated content
+# ---------------
+
+/content/3_works/[0-9]_*/
+/content/3_works/_drafts/
+/content/**/*.jpg
+/content/**/*.jpeg
+/content/**/*.png
+/content/**/*.gif
+/content/**/*.webp
+/content/**/*.svg
+/content/**/*.mp4
+/content/**/*.mov
+/content/**/*.webm
+/content/**/*.pdf
+
 # Lock files
 # ---------------
 
@@ -53,3 +69,6 @@ Icon
 # Dependency directories
 # ---------------
 node_modules/
+vendor/
+kirby/
+/site/plugins/kirby-seo/

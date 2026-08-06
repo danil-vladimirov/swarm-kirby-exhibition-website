@@ -10,8 +10,10 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
-        "getkirby/cms": "^4.0"
+        "php": "~8.3.0 || ~8.4.0",
+        "getkirby/cms": "^5.0",
+        "tobimori/kirby-seo": "^2.0.0-beta.4",
+        "spatie/schema-org": "^3.23"
     },
     "config": {
         "allow-plugins": {
@@ -19,10 +21,13 @@
         },
         "optimize-autoloader": true
     },
+    "extra": {
+        "kirby-cms-path": false
+    },
     "scripts": {
         "start": [
             "Composer\\Config::disableProcessTimeout",
-            "@php -S localhost:8000 kirby/router.php"
+            "@php -S localhost:8000 vendor/getkirby/cms/router.php"
         ]
     }
 }

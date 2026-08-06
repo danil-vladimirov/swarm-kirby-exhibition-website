@@ -33,7 +33,10 @@
 
     <div class="relative px-4 pb-4 grid grid-cols-2 gap-y-4 gap-x-4 md:grid-cols-3 xl:grid-cols-4">
 
-        <?php $sortedworks = $articles->sortBy('surname', 'asc');
+        <?php
+        $portfolioMode = site()->portfolio_mode()->toBool();
+        $sortedworks = $portfolioMode === true ? $articles : $articles->sortBy('surname', 'asc');
+
         foreach ($sortedworks as $article) : ?>
 
             <a href="<?= $article->url() ?>" class="relative">
@@ -45,8 +48,12 @@
                             <?php endforeach ?>
                         </div>
                         <div class="flex flex-col mt-2">
-                            <div class="flex font-medium text-lg md:text-2xl"><?= $article->name() ?> <?= $article->surname() ?></div>
-                            <div class="flex"><?= $article->project_title() ?></div>
+                            <?php if ($portfolioMode === true): ?>
+                                <div class="flex font-medium text-lg md:text-2xl"><?= $article->project_title() ?></div>
+                            <?php else: ?>
+                                <div class="flex font-medium text-lg md:text-2xl"><?= $article->name() ?> <?= $article->surname() ?></div>
+                                <div class="flex"><?= $article->project_title() ?></div>
+                            <?php endif ?>
                         </div>
                     </div>
                 </div>

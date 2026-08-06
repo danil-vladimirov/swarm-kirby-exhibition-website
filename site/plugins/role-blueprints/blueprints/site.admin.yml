@@ -15,8 +15,22 @@ tabs:
             templates:
               - home
               - about
+          portfolio:
+            type: fields
+            fields:
+              portfolio_mode:
+                label: Portfolio Mode
+                type: toggle
+                help: |
+                  Use the website as a personal portfolio website.
+
+                  Use project titles as the main project labels and sort published projects manually.
+
+                  User registration is disabled in this mode.
           registration:
             type: fields
+            when:
+              portfolio_mode: false
             fields:
               registration_toggle:
                 label: Turn on User registration

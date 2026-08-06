@@ -2,6 +2,10 @@ Title: Website title
 
 ----
 
+Portfolio-mode: false
+
+----
+
 Registration-toggle: false
 
 ----
@@ -58,4 +62,4 @@ Socialmediaaccounts:
 
 ----
 
-Projects: 
+Projects:

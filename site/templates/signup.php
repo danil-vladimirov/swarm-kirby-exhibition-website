@@ -34,7 +34,7 @@
 			</div>
 			<?php endif ?>
 
-				<?php if ($site->registration_toggle()->toBool() === true): ?>
+				<?php if ($site->registration_toggle()->toBool() === true && $site->portfolio_mode()->toBool() === false): ?>
 
 				<form method="post" class="text-lg mt-8" action="<?= $page->url() ?>">
 					<input type="hidden" name="csrf" value="<?= csrf() ?>">

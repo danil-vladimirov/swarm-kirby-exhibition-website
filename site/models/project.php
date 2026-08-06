@@ -11,9 +11,13 @@ class ProjectPage extends Page
         if (isset($readable[$template]) === true) {
             return $readable[$template];
         }
-        if ($this->author()->toUser() === kirby()->user() || kirby()->user()->role()->name() === 'admin') {
+
+        $user = kirby()->user();
+
+        if ($user && ($this->author()->toUser()?->id() === $user->id() || $user->role()->name() === 'admin')) {
             return true;
         }
+
         return false;
 
     }
